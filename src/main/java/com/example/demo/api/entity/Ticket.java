@@ -12,8 +12,8 @@ import com.example.demo.api.enums.StatusEnum;
 
 import lombok.Data;
 
-@Document
 @Data
+@Document
 public class Ticket {
 	@Id
 	private String id;
