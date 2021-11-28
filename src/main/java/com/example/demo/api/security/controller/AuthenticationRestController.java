@@ -38,7 +38,7 @@ public class AuthenticationRestController {
     @Autowired
     private UserService userService;
 
-    @PostMapping(value="/api/auth")
+    @PostMapping("/api/auth")
     public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtAuthenticationRequest authenticationRequest) throws AuthenticationException {
 
         final Authentication authentication = authenticationManager.authenticate(
@@ -52,7 +52,7 @@ public class AuthenticationRestController {
         final String token = jwtTokenUtil.generateToken(userDetails);
         final User user = userService.findByEmail(authenticationRequest.getEmail());
         user.setPassword(null);
-        return ResponseEntity.ok(new CurrentUser(token, user));
+        return ResponseEntity.ok().body(new CurrentUser(token, user));
     }
 
     @PostMapping(value="/api/refresh")
