@@ -85,7 +85,7 @@ public class UserController {
 			response.getErrors().add(e.getMessage());
 			return ResponseEntity.badRequest().body(response);
 		}
-		return ResponseEntity.status(HttpStatus.CREATED).body(response);
+		return ResponseEntity.ok(response);
 	}
 	
 	private void validateUpdateUser(User user, BindingResult result) {
