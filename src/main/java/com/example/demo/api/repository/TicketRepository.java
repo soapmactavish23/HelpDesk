@@ -8,7 +8,7 @@ import com.example.demo.api.entity.Ticket;
 
 public interface TicketRepository extends MongoRepository<Ticket, String> {
 
-	Page<Ticket> findByUserId(String userId, Pageable pages);
+	Page<Ticket> findByUserIdOrderByDateDesc(Pageable pages,String userId);
 	
 	Page<Ticket> findByTitleIgnoreCaseContainingAndStatusAndPriorityOrderByDateDesc(
 			String title, String status, String priority, Pageable pages);
