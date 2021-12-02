@@ -1,10 +1,12 @@
 package com.example.demo.api.service;
 
 import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Component;
 
 import com.example.demo.api.entity.ChangeStatus;
 import com.example.demo.api.entity.Ticket;
 
+@Component
 public interface TicketService {
 
 	Ticket createOrUpdate(Ticket ticket);

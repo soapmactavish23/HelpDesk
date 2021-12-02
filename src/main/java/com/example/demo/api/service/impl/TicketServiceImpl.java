@@ -1,4 +1,4 @@
-package com.example.demo.api.impl;
+package com.example.demo.api.service.impl;
 
 import java.util.Optional;
 
@@ -6,12 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Component;
+
 import com.example.demo.api.entity.ChangeStatus;
 import com.example.demo.api.entity.Ticket;
 import com.example.demo.api.repository.ChangeStatusRepository;
 import com.example.demo.api.repository.TicketRepository;
 import com.example.demo.api.service.TicketService;
 
+@Component
 public class TicketServiceImpl implements TicketService {
 
 	@Autowired
