@@ -145,9 +145,11 @@ As seguintes ferramentas foram usadas na construção do projeto:
 	  ]
 	}
 	
-`DELETE /api/user/{id}`
-	
-	Response: CODE 200
+### Path 
+`/api/user/{id}`
+### Method 
+`DELETE`
+### Response
 	{
 	  "data": "string",
 	  "errors": [
@@ -155,7 +157,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 	  ]
 	}
 
-### Ticket Request
+## Ticket Request
 
 ### Path
 `/api/ticket`
@@ -315,6 +317,304 @@ As seguintes ferramentas foram usadas na construção do projeto:
 		"status": "New"
 	      }
 	    ]
+	  },
+	  "errors": [
+	    "string"
+	  ]
+	}
+
+### Path
+`/api/ticket/{page}/{count}`
+### Method
+`GET`
+### Response
+	{
+	  "data": {
+	    "totalPages": 0,
+	    "totalElements": 0,
+	    "sort": {
+	      "sorted": true,
+	      "unsorted": true
+	    },
+	    "pageable": {
+	      "sort": {
+		"sorted": true,
+		"unsorted": true
+	      },
+	      "pageNumber": 0,
+	      "pageSize": 0,
+	      "paged": true,
+	      "unpaged": true,
+	      "offset": 0
+	    },
+	    "first": true,
+	    "numberOfElements": 0,
+	    "last": true,
+	    "size": 0,
+	    "content": [
+	      {
+		"id": "string",
+		"user": {
+		  "id": "string",
+		  "email": "string",
+		  "password": "string",
+		  "profile": "ROLE_ADMIN"
+		},
+		"date": "2021-12-05T01:33:23.759Z",
+		"title": "string",
+		"number": 0,
+		"status": "New",
+		"priority": "High",
+		"assignedUser": {
+		  "id": "string",
+		  "email": "string",
+		  "password": "string",
+		  "profile": "ROLE_ADMIN"
+		},
+		"description": "string",
+		"image": "string",
+		"changes": [
+		  {
+		    "id": "string",
+		    "userChange": {
+		      "id": "string",
+		      "email": "string",
+		      "password": "string",
+		      "profile": "ROLE_ADMIN"
+		    },
+		    "dataChangeStatus": "2021-12-05T01:33:23.759Z",
+		    "status": "New"
+		  }
+		]
+	      }
+	    ],
+	    "number": 0
+	  },
+	  "errors": [
+	    "string"
+	  ]
+	}
+### Path
+`/api/ticket/{page}/{count}/{number}/{title}/{status}/{priority}/{assigned}`
+### Method
+`GET`
+### Response
+	{
+	  "data": {
+	    "totalPages": 0,
+	    "totalElements": 0,
+	    "sort": {
+	      "sorted": true,
+	      "unsorted": true
+	    },
+	    "pageable": {
+	      "sort": {
+		"sorted": true,
+		"unsorted": true
+	      },
+	      "pageNumber": 0,
+	      "pageSize": 0,
+	      "paged": true,
+	      "unpaged": true,
+	      "offset": 0
+	    },
+	    "first": true,
+	    "numberOfElements": 0,
+	    "last": true,
+	    "size": 0,
+	    "content": [
+	      {
+		"id": "string",
+		"user": {
+		  "id": "string",
+		  "email": "string",
+		  "password": "string",
+		  "profile": "ROLE_ADMIN"
+		},
+		"date": "2021-12-05T01:33:23.759Z",
+		"title": "string",
+		"number": 0,
+		"status": "New",
+		"priority": "High",
+		"assignedUser": {
+		  "id": "string",
+		  "email": "string",
+		  "password": "string",
+		  "profile": "ROLE_ADMIN"
+		},
+		"description": "string",
+		"image": "string",
+		"changes": [
+		  {
+		    "id": "string",
+		    "userChange": {
+		      "id": "string",
+		      "email": "string",
+		      "password": "string",
+		      "profile": "ROLE_ADMIN"
+		    },
+		    "dataChangeStatus": "2021-12-05T01:33:23.759Z",
+		    "status": "New"
+		  }
+		]
+	      }
+	    ],
+	    "number": 0
+	  },
+	  "errors": [
+	    "string"
+	  ]
+	}
+### Path
+`/api/ticket/{id}`
+### Method
+`GET`
+### Response
+	{
+	  "data": {
+	    "id": "string",
+	    "user": {
+	      "id": "string",
+	      "email": "string",
+	      "password": "string",
+	      "profile": "ROLE_ADMIN"
+	    },
+	    "date": "2021-12-05T01:42:24.876Z",
+	    "title": "string",
+	    "number": 0,
+	    "status": "New",
+	    "priority": "High",
+	    "assignedUser": {
+	      "id": "string",
+	      "email": "string",
+	      "password": "string",
+	      "profile": "ROLE_ADMIN"
+	    },
+	    "description": "string",
+	    "image": "string",
+	    "changes": [
+	      {
+		"id": "string",
+		"userChange": {
+		  "id": "string",
+		  "email": "string",
+		  "password": "string",
+		  "profile": "ROLE_ADMIN"
+		},
+		"dataChangeStatus": "2021-12-05T01:42:24.876Z",
+		"status": "New"
+	      }
+	    ]
+	  },
+	  "errors": [
+	    "string"
+	  ]
+	}
+### Path
+`/api/ticket/{id}`
+### Method
+`DELETE`
+### Response
+	{
+	  "data": "string",
+	  "errors": [
+	    "string"
+	  ]
+	}
+### Path
+`/api/ticket/{id}/{status}`
+### Method
+`PUT`
+### Request
+	{
+	  "id": "string",
+	  "user": {
+	    "id": "string",
+	    "email": "string",
+	    "password": "string",
+	    "profile": "ROLE_ADMIN"
+	  },
+	  "date": "2021-12-05T01:46:04.351Z",
+	  "title": "string",
+	  "number": 0,
+	  "status": "New",
+	  "priority": "High",
+	  "assignedUser": {
+	    "id": "string",
+	    "email": "string",
+	    "password": "string",
+	    "profile": "ROLE_ADMIN"
+	  },
+	  "description": "string",
+	  "image": "string",
+	  "changes": [
+	    {
+	      "id": "string",
+	      "userChange": {
+		"id": "string",
+		"email": "string",
+		"password": "string",
+		"profile": "ROLE_ADMIN"
+	      },
+	      "dataChangeStatus": "2021-12-05T01:46:04.351Z",
+	      "status": "New"
+	    }
+	  ]
+	}
+### Response
+	{
+	  "data": {
+	    "id": "string",
+	    "user": {
+	      "id": "string",
+	      "email": "string",
+	      "password": "string",
+	      "profile": "ROLE_ADMIN"
+	    },
+	    "date": "2021-12-05T01:46:04.380Z",
+	    "title": "string",
+	    "number": 0,
+	    "status": "New",
+	    "priority": "High",
+	    "assignedUser": {
+	      "id": "string",
+	      "email": "string",
+	      "password": "string",
+	      "profile": "ROLE_ADMIN"
+	    },
+	    "description": "string",
+	    "image": "string",
+	    "changes": [
+	      {
+		"id": "string",
+		"userChange": {
+		  "id": "string",
+		  "email": "string",
+		  "password": "string",
+		  "profile": "ROLE_ADMIN"
+		},
+		"dataChangeStatus": "2021-12-05T01:46:04.380Z",
+		"status": "New"
+	      }
+	    ]
+	  },
+	  "errors": [
+	    "string"
+	  ]
+	}
+### Path
+`/api/ticket/sumary`
+### Method
+`DELETE`
+### Response
+	{
+	  "data": {
+	    "amountNew": 0,
+	    "amountResolved": 0,
+	    "amountAproved": 0,
+	    "amountDisaproved": 0,
+	    "amountAssigned": 0,
+	    "amountClosed": 0
 	  },
 	  "errors": [
 	    "string"
