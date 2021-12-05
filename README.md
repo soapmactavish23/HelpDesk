@@ -31,3 +31,51 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ## 🖥️ Plataforma adotada
 
   - WEB
+
+## Request
+
+`POST /api/user`
+	
+	Request body
+    {
+	  "id": "string",
+	  "email": "string",
+	  "password": "string",
+	  "profile": "ROLE_ADMIN"
+	}
+	
+	Response: CODE 200
+	{
+	  "data": {
+	    "id": "string",
+	    "email": "string",
+	    "password": "string",
+	    "profile": "ROLE_ADMIN"
+	  },
+	  "errors": [
+	    "string"
+	  ]
+	}
+	
+`PUT /api/user`
+	
+	Request body
+    {
+	  "id": "string",
+	  "email": "string",
+	  "password": "string",
+	  "profile": "ROLE_ADMIN"
+	}
+	
+	Response: CODE 200
+	{
+	  "data": {
+	    "id": "string",
+	    "email": "string",
+	    "password": "string",
+	    "profile": "ROLE_ADMIN"
+	  },
+	  "errors": [
+	    "string"
+	  ]
+	}
