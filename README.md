@@ -27,12 +27,15 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" heigth="20" width="20"/> [Spring Boot](https://spring.io/projects/spring-boot)
 - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" heigth="20" width="20"/> [Java](https://www.java.com/pt-BR)
+- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" heigth="20" width="20"/> [MongoDB](https://www.mongodb.com)
 
 ## 🖥️ Plataforma adotada
 
   - WEB
 
 ## Request
+
+### User Request
 
 `POST /api/user`
 	
@@ -75,6 +78,72 @@ As seguintes ferramentas foram usadas na construção do projeto:
 	    "password": "string",
 	    "profile": "ROLE_ADMIN"
 	  },
+	  "errors": [
+	    "string"
+	  ]
+	}
+
+`GET /api/user/{page}/{count}`
+	
+	Response: CODE 200
+	{
+	  "data": {
+	    "totalPages": 0,
+	    "totalElements": 0,
+	    "sort": {
+	      "sorted": true,
+	      "unsorted": true
+	    },
+	    "pageable": {
+	      "sort": {
+		"sorted": true,
+		"unsorted": true
+	      },
+	      "pageNumber": 0,
+	      "pageSize": 0,
+	      "paged": true,
+	      "unpaged": true,
+	      "offset": 0
+	    },
+	    "first": true,
+	    "numberOfElements": 0,
+	    "last": true,
+	    "size": 0,
+	    "content": [
+	      {
+		"id": "string",
+		"email": "string",
+		"password": "string",
+		"profile": "ROLE_ADMIN"
+	      }
+	    ],
+	    "number": 0
+	  },
+	  "errors": [
+	    "string"
+	  ]
+	}
+	
+`GET /api/user/{id}`
+	
+	Response: CODE 200
+	{
+	  "data": {
+	    "id": "string",
+	    "email": "string",
+	    "password": "string",
+	    "profile": "ROLE_ADMIN"
+	  },
+	  "errors": [
+	    "string"
+	  ]
+	}
+	
+`DELETE /api/user/{id}`
+	
+	Response: CODE 200
+	{
+	  "data": "string",
 	  "errors": [
 	    "string"
 	  ]
